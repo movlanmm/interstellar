@@ -38,31 +38,31 @@ const moonMaterial = new THREE.MeshStandardMaterial({
   map: moonTexture,
 });
 
-// Number of stars
-const starCount = 5000;
+// // Number of stars
+// const starCount = 5000;
 
-// Create geometry and material for the stars
-const geometry = new THREE.BufferGeometry();
-const vertices = new Float32Array(starCount * 3);
+// // Create geometry and material for the stars
+// const geometry = new THREE.BufferGeometry();
+// const vertices = new Float32Array(starCount * 3);
 
-// Random star positions
-for (let i = 0; i < starCount * 3; i++) {
-  vertices[i] = Math.random() * 100 - 50; // Random positions between -50 and 50
-}
+// // Random star positions
+// for (let i = 0; i < starCount * 3; i++) {
+//   vertices[i] = Math.random() * 100 - 50; // Random positions between -50 and 50
+// }
 
-geometry.setAttribute("position", new THREE.BufferAttribute(vertices, 3));
+// geometry.setAttribute("position", new THREE.BufferAttribute(vertices, 3));
 
-const material = new THREE.PointsMaterial({
-  color: 0xffffff,
-  size: 0.03, // Size of each star
-  transparent: true,
-  opacity: 0.8,
-});
+// const material = new THREE.PointsMaterial({
+//   color: 0xffffff,
+//   size: 0.03, // Size of each star
+//   transparent: true,
+//   opacity: 0.8,
+// });
 
-// Create points and add to the scene
-const stars = new THREE.Points(geometry, material);
-stars.position.z = -10;
-scene.add(stars);
+// // Create points and add to the scene
+// const stars = new THREE.Points(geometry, material);
+// stars.position.z = -10;
+// scene.add(stars);
 
 const sphereGeometry = new THREE.SphereGeometry(1, 32, 32);
 
