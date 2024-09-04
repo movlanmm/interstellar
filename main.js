@@ -186,7 +186,7 @@ const camera = new THREE.PerspectiveCamera(
   1000
 );
 
-camera.position.set(20, 10, 40);
+camera.position.set(20, 10, 60);
 
 //Audio
 
