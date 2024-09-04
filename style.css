@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#canvas {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+main {
+  position: relative;
+  height: 100dvh;
+}
+
+.btn {
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 40px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 100;
+}
+
+.btn.pause-btn {
+  display: none;
+}
