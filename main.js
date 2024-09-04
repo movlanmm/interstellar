@@ -39,7 +39,7 @@ const moonMaterial = new THREE.MeshStandardMaterial({
 });
 
 // Number of stars
-const starCount = 10000;
+const starCount = 5000;
 
 // Create geometry and material for the stars
 const geometry = new THREE.BufferGeometry();
