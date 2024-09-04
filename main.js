@@ -11,12 +11,12 @@ const scene = new THREE.Scene();
 
 const textureLoader = new THREE.TextureLoader();
 
-const sunTexture = textureLoader.load("./public/2k_sun.jpg");
-const mercuryTexture = textureLoader.load("./public/2k_mercury.jpg");
-const venusTexture = textureLoader.load("./public/2k_venus_surface.jpg");
-const earthTexture = textureLoader.load("./public/2k_earth_daymap.jpg");
-const marsTexture = textureLoader.load("./public/2k_mars.jpg");
-const moonTexture = textureLoader.load("./public/2k_moon.jpg");
+const sunTexture = textureLoader.load("/2k_sun.jpg");
+const mercuryTexture = textureLoader.load("/2k_mercury.jpg");
+const venusTexture = textureLoader.load("/2k_venus_surface.jpg");
+const earthTexture = textureLoader.load("/2k_earth_daymap.jpg");
+const marsTexture = textureLoader.load("/2k_mars.jpg");
+const moonTexture = textureLoader.load("/2k_moon.jpg");
 
 const mercuryMaterial = new THREE.MeshStandardMaterial({
   map: mercuryTexture,
@@ -133,7 +133,7 @@ const planets = [
     distance: 30,
     speed: 0.002,
     material: new THREE.MeshBasicMaterial({
-      map: textureLoader.load("./public/2k_jupiter.jpg"),
+      map: textureLoader.load("/2k_jupiter.jpg"),
     }),
     moons: [],
   },
@@ -143,7 +143,7 @@ const planets = [
     distance: 35,
     speed: 0.001,
     material: new THREE.MeshBasicMaterial({
-      map: textureLoader.load("./public/2k_saturn.jpg"),
+      map: textureLoader.load("/2k_saturn.jpg"),
     }),
     moons: [],
   },
@@ -196,7 +196,7 @@ camera.add(listener);
 const audioLoader = new THREE.AudioLoader();
 const audio = new THREE.Audio(listener);
 
-audioLoader.load("./public/HansZimmer.mp3", function (buffer) {
+audioLoader.load("/HansZimmer.mp3", function (buffer) {
   audio.setBuffer(buffer);
   audio.setLoop(true);
   audio.setVolume(0.5);
